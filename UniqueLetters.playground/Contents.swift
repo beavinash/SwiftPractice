@@ -1,16 +1,16 @@
 import UIKit
 
 func uniqueLetters(input: String) -> Bool {
-    var result = [Character]()
     
-    for char in input {
-        if result.contains(char) {
+    var result = ""
+    
+    for letter in input {
+        if result.contains(letter) {
             return false
         } else {
-            result.append(char)
+            result.append(letter)
         }
     }
-    
     return true
 }
 
@@ -19,8 +19,7 @@ func uniqueLetters1(input: String) -> Bool {
 }
 
 
+uniqueLetters(input: "No duplicates")
 uniqueLetters(input: "Hello World!")
-uniqueLetters(input: "No Duplicates")
-
+uniqueLetters1(input: "No duplicates")
 uniqueLetters1(input: "Hello World!")
-uniqueLetters1(input: "No Duplicates")
